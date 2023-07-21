@@ -12,8 +12,6 @@ const CoverCircle = styled.div`
   border-radius: 50%;
   border: 5px solid ${theme.colors.borderHover};
   background-color: ${theme.colors.borderFocus};
-  transition: all 1s ease;
-  transform-origin: 50% 15px;
   z-index: 1;
 `;
 
@@ -26,27 +24,6 @@ const HiddenCircle = styled.div`
   height: 100px;
   border-radius: 50%;
   background-color: ${theme.colors.paper};
-  &:before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 20px;
-    top: 0px;
-    background-image: radial-gradient(
-        circle at center,
-        ${theme.colors.borderHover} 5px,
-        transparent 5px
-      ),
-      radial-gradient(
-        circle at center,
-        ${theme.colors.borderHover} 5px,
-        transparent 5px
-      );
-    background-size: 20px 20px;
-    background-position: top center;
-    background-repeat: no-repeat;
-    z-index: 2;
-  }
 `;
 
 const RevealWrapper = styled.div`
@@ -54,9 +31,6 @@ const RevealWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  &:hover #cover {
-    transform: rotate(160deg);
-  }
 `;
 
 export const HingeCircleReveal: React.FC = () => {

@@ -10,16 +10,7 @@ const StyledButton = styled.button`
   background: ${theme.colors.primary.main};
   color: ${theme.colors.paper};
   border-radius: 24px;
-  box-shadow: ${theme.elevation[1].boxShadow};
   cursor: pointer;
-  transition-property: border, background-color, box-shadow;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
-  &:hover {
-    border: 1px solid ${theme.colors.primary.dark};
-    background: ${theme.colors.primary.dark};
-    box-shadow: ${theme.elevation[2].boxShadow};
-  }
 `;
 
 export const ButtonHoverRaised: React.FC = () => {

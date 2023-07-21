@@ -1,21 +1,8 @@
-import styled, { keyframes } from "styled-components";
-
 import React from "react";
+import styled from "styled-components";
 import { theme } from "../../theming/defaultTheme";
 
 const BALL_COUNT = 5;
-
-const bounceAnimation = keyframes`
-   0%, 100% {
-    transform: translateY(0) scale(1);
-    background-color:  ${theme.colors.primary.main};
-} 
-   50% {
-    transform: translateY(-20px) scale(1.5);
-     background-color:  ${theme.colors.primary.lightest};
-    } 
-   
-`;
 
 const Row = styled.div`
   display: flex;
@@ -29,11 +16,7 @@ const StyledLoaderBall = styled.div<{ delay: number }>`
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  animation-name: ${bounceAnimation};
-  animation-duration: 1s;
-  animation-delay: ${({ delay }) => delay}s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: infinite;
+  background-color: ${theme.colors.primary.main};
 `;
 
 export const BounceLoadingExtra: React.FC = () => {

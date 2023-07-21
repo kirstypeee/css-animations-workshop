@@ -11,20 +11,7 @@ const StyledButton = styled.button`
   color: ${theme.colors.paper};
   border-radius: 24px;
   cursor: pointer;
-  transition-property: background;
-  transition-duration: 0.8s;
   background-position: center;
-  transition: background 0.8s;
-  &:hover {
-    background: ${theme.colors.primary.light}
-      radial-gradient(circle, transparent 1%, ${theme.colors.primary.light} 1%)
-      center/15000%;
-  }
-  &:active {
-    background-color: ${theme.colors.primary.lightest};
-    background-size: 100%;
-    transition: background 0s;
-  }
 `;
 
 export const ButtonRippleSimple: React.FC = () => {

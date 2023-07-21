@@ -11,13 +11,6 @@ const StyledButton = styled.button`
   color: ${theme.colors.paper};
   border-radius: 24px;
   cursor: pointer;
-  transition-property: border, background-color;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
-  &:hover {
-    border: 1px solid ${theme.colors.primary.dark};
-    background-color: ${theme.colors.primary.dark};
-  }
 `;
 
 export const ButtonHover: React.FC = () => {
