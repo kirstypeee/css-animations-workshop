@@ -4,6 +4,7 @@ const colors = {
   borderHover: "#8C92AC",
   borderFocus: "#6082B6",
   primary: {
+    lightest: "#C778D7",
     light: "#6D257B",
     main: "#50257B",
     dark: "#29174D",

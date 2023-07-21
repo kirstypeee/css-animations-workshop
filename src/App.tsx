@@ -1,4 +1,3 @@
-import { LandingForm } from "./pages/landing/landingForm";
 import React from "react";
 import WebFont from "webfontloader";
 import styled from "styled-components";
@@ -14,11 +13,7 @@ const App: React.FC = () => {
       families: theme.font.family.split(","),
     },
   });
-  return (
-    <AppStyles>
-      <LandingForm onSubmit={() => {}} />
-    </AppStyles>
-  );
+  return <AppStyles />;
 };
 
 export default App;

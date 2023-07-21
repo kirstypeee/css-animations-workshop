@@ -7,8 +7,6 @@ interface TextInputProps {
   id: string;
   value: string;
   onChange: (value: string) => void;
-  required?: boolean;
-  validation?: string;
 }
 
 const InputField = styled.div`
@@ -46,23 +44,12 @@ const StyledLabel = styled.label`
   pointer-events: none;
   transition: 0.1s ease;
 `;
-const StyledValidation = styled.span<{ validation: boolean }>`
-  position: absolute;
-  bottom: ${({ validation }) => (validation ? "-20px" : "0px")};
-  color: ${theme.colors.error};
-  padding-left: ${theme.shape.borderRadius}px;
-  font-size: ${theme.font.small}px;
-  transition: 0.2s ease;
-  z-index: -1;
-`;
 
 export const TextInput: React.FC<TextInputProps> = ({
   label,
   id,
   value,
   onChange,
-  validation,
-  required,
 }) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     onChange(e.target.value);
@@ -71,7 +58,6 @@ export const TextInput: React.FC<TextInputProps> = ({
   return (
     <InputField>
       <StyledInput
-        required={required}
         id={id}
         type="text"
         onChange={handleChange}
@@ -80,11 +66,7 @@ export const TextInput: React.FC<TextInputProps> = ({
       />
       <StyledLabel htmlFor={id}>
         {label}
-        {required && " *"}
       </StyledLabel>
-      <StyledValidation validation={Boolean(validation)}>
-        {validation}
-      </StyledValidation>
     </InputField>
   );
 };

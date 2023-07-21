@@ -1,0 +1,30 @@
+div.static {
+  position: static;
+}
+
+div.relative {
+  position: relative;
+  left: 30px; /** 30px left of where it otherwise would have been */
+}
+
+/** Out of the normal flow, no gap*/
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+}
+
+/** Out of the normal flow, no gap*/
+div.absolute {
+  position: absolute;
+  top: 80px;
+  right: 0;
+}
+
+div.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: green;
+}

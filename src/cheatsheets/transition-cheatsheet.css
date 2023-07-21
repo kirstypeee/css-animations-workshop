@@ -1,0 +1,36 @@
+div {
+  /**
+    * The name/s of CSS properties to which transitions should be applied.
+    * Changes to all other properties occur instantaneously as usual.
+    **/
+  transition-property: all, margin-right, height, background-color;
+  /*all CSS properties are animatable unless otherwise specified.*/
+
+  /**
+  * The duration over which transitions should occur.
+  * One for all, or specify each
+  */
+  transition-duration: 4s;
+  transition-duration: 3s, 400ms, 1m, 30s;
+
+  /**
+  * Specifies a function to define how intermediate values for properties
+  * are computed. Built in or define a cubic bezier (see links)
+  */
+  transition-timing-function: linear;
+  transition-timing-function: ease-in-out;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  /** https://easings.net/ **/
+  /** https://cubic-bezier.com/ */
+
+  /**
+  * Defines how long to wait between the time a property is changed
+  * and the transition actually begins.
+  */
+  transition-delay: 300ms;
+
+  /** Shorthand **/
+  transition: "<property> <duration> <timing-function> <delay>";
+  transition: all 0.3s ease;
+}
+

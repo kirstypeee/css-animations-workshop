@@ -1,0 +1,55 @@
+@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+div {
+  animation-name: slidein;
+  /** Specifies the delay between an element loading and the start 
+   of an animation sequence */
+  animation-delay: 30ms;
+
+  /** For one cycle **/
+  animation-duration: 1s;
+
+  /** Forward or backwards through keyframes*/
+  animation-direction: normal;
+  animation-direction: reverse;
+  animation-direction: alternate;
+  animation-direction: alternate-reverse;
+
+  /** number | infinite */
+  animation-iteration-count: 1;
+
+  /** running | paused */
+  animation-play-state: running;
+
+  /** see transition-timing-function */
+  animation-timing-function: ease;
+}
+
+/** IN STYLED COMPONENTS
+
+import styled, { keyframes } from "styled-components";
+
+ const slidein = keyframes`
+   0% {
+    transform: translateX(0%);
+   } 
+   100% {
+    transform: translateX(100%);
+    } 
+`;
+
+const StyledComponents = styled.div`
+  animation-name: ${slidein};
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+`;
+*/
